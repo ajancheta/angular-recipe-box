@@ -1,12 +1,17 @@
 <h1>{{title}}</h1>
 
 <div *ngFor="let currentRecipe of recipes">
-  <h3>{{currentRecipe.name}}</h3>
-  <ul>
-    <li *ngFor="let ingredient of currentRecipe.ingredients">{{ingredient}}</li>
-  </ul>
-  <ol>
-    <li *ngFor="let direction of currentRecipe.directions">{{direction}}</li>
-  </ol>
-  <br>
+  
+  <a class="waves-effect waves-light btn modal-trigger" href="#{{currentRecipe.name}}">{{currentRecipe.name}}</a>
+  <div id="{{currentRecipe.name}}" class="modal">
+    <div class="modal-content">
+    <ul>
+      <li *ngFor="let ingredient of currentRecipe.ingredients">{{ingredient}}</li>
+    </ul>
+    <ol>
+      <li *ngFor="let direction of currentRecipe.directions">{{direction}}</li>
+    </ol>
+    <br>
+    </div>
+  </div>
 </div>
