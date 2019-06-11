@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RecipeComponent } from './recipe/recipe.component';
-
+import 'materialize-css';
 
 @NgModule({
   declarations: [
@@ -10,9 +10,9 @@ import { RecipeComponent } from './recipe/recipe.component';
     RecipeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
